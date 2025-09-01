@@ -61,3 +61,57 @@
   border: none;
   font-size: 1.5rem;
 }
+
+/* Banner Styles */
+.custom-banner {
+  position: relative;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+}
+
+.custom-banner__background {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.6);
+  z-index: 1;
+}
+
+.custom-banner__overlay {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  padding: 0 20px;
+}
+
+.custom-banner__title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.custom-banner__subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.custom-banner__button {
+  display: inline-block;
+  background: #111;
+  color: #fff;
+  padding: 12px 32px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.custom-banner__button:hover {
+  background: #444;
+}
