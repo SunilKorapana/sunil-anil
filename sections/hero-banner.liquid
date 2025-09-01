@@ -1,0 +1,66 @@
+{% schema %}
+{
+  "name": "Hero Banner",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "hero_image",
+      "label": "Hero Image"
+    },
+    {
+      "type": "text",
+      "id": "hero_heading",
+      "label": "Heading",
+      "default": "Welcome to Our Store"
+    },
+    {
+      "type": "text",
+      "id": "hero_subheading",
+      "label": "Subheading",
+      "default": "Discover our exclusive collections"
+    },
+    {
+      "type": "url",
+      "id": "hero_button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "text",
+      "id": "hero_button_text",
+      "label": "Button Text",
+      "default": "Shop Now"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero Banner"
+    }
+  ]
+}
+{% endschema %}
+
+<section class="relative w-full bg-gradient-to-r from-gray-50 to-white">
+  <div class="max-w-7xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-8 items-center">
+    <!-- Text Content -->
+    <div>
+      <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-4">
+        {{ section.settings.hero_heading }}
+      </h1>
+      <p class="text-lg text-gray-600 mb-6">
+        {{ section.settings.hero_subheading }}
+      </p>
+      {% if section.settings.hero_button_text != blank %}
+        <a href="{{ section.settings.hero_button_link }}" class="inline-block px-6 py-3 rounded-2xl bg-black text-white font-semibold shadow hover:opacity-90 transition">
+          {{ section.settings.hero_button_text }}
+        </a>
+      {% endif %}
+    </div>
+
+    <!-- Hero Image -->
+    <div class="flex justify-center">
+      {% if section.settings.hero_image != blank %}
+        <img src="{{ section.settings.hero_image | image_url: width: 800 }}" alt="Hero Image" class="rounded-2xl shadow-lg w-full h-auto object-cover" />
+      {% endif %}
+    </div>
+  </div>
+</section>
