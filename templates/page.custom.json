@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "banner-custom": {
@@ -5,8 +14,8 @@
       "settings": {
         "heading": "Welcome to Our Store",
         "subheading": "Discover our latest collection",
-        "button_link": "/collections/all",
-        "button_label": "Shop Now"
+        "button_label": "Shop Now",
+        "button_link": "/collections/all"
       }
     },
     "product-grid-custom": {
@@ -14,5 +23,8 @@
       "settings": {}
     }
   },
-  "order": ["banner-custom", "product-grid-custom"]
+  "order": [
+    "banner-custom",
+    "product-grid-custom"
+  ]
 }
