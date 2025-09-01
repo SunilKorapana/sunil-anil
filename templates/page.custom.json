@@ -1,0 +1,18 @@
+{
+  "sections": {
+    "banner-custom": {
+      "type": "banner-custom",
+      "settings": {
+        "heading": "Welcome to Our Store",
+        "subheading": "Discover our latest collection",
+        "button_link": "/collections/all",
+        "button_label": "Shop Now"
+      }
+    },
+    "product-grid-custom": {
+      "type": "product-grid-custom",
+      "settings": {}
+    }
+  },
+  "order": ["banner-custom", "product-grid-custom"]
+}
